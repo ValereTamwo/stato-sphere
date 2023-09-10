@@ -42,7 +42,7 @@ export default function Hero() {
             thumbWidth={900}
             thumbHeight={400}
             thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
+            video="/videos/flower.webm"
             videoWidth={1920}
             videoHeight={1080} />
 

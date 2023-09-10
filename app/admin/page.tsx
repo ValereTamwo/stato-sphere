@@ -109,7 +109,7 @@ const AdminPanel: React.FC = () => {
     }
   }, [collection]);
 
-  const loadDocuments =  async () => {
+  const loadDocuments =  async ():void => {
     // Simulate loading documents from dummy data
     // setDocuments(dummyData);
     const result= await getCollectionData(collection);
