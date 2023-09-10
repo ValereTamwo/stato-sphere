@@ -1,5 +1,6 @@
 'use client'
-
+import icom from '@/public/images/icon/icon.jpeg'
+import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 
@@ -61,18 +62,62 @@ export default function MobileMenu() {
       >
         <ul className="bg-gray-800 px-4 py-2">
           <li>
-            <Link href="/signin" className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-              Sign in
-            </Link>
+                <Link
+                  href="/"
+                  className="font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Acceuil
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/news"
+                  className="font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Annonces
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/stats"
+                  className="font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Statistiques
+                </Link>
+               
+              </li>
+               <li>
+                <Link
+                  href="/concours"
+                  className="font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Concours
+                </Link>
+              </li>
+                <li>
+                <Link
+                  href="/biblio"
+                  className="font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Bibliotheques
+                </Link>
+          </li>
+           <li>
+                <Link
+                  href="/contact"
+                  className="font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Contact
+                </Link>
           </li>
           <li>
-            <Link
-              href="/signup"
-              className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out" onClick={() => setMobileNavOpen(false)}
-            >
-              Sign up
-            </Link>
-          </li>
+                <Link
+                  href="/"
+                  className="font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  <Image src={icom} width={40} height={40} alt='logo' />
+                </Link>
+            </li>
         </ul>
       </nav>
     </div>
