@@ -6,26 +6,37 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-no-ts-check": "tsc --noEmit && next build",
+    "export": "next export"
   },
   "dependencies": {
+    "@cyntler/react-doc-viewer": "^1.14.0",
     "@headlessui/react": "^1.7.14",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "aos": "^3.0.0-beta.6",
+    "encoding": "^0.1.13",
     "firebase": "^10.3.0",
+    "json2csv": "^6.0.0-alpha.2",
     "moment": "^2.29.4",
     "next": "^13.4.4",
     "react": "18.2.0",
+    "react-csv": "^2.2.2",
     "react-dom": "18.2.0",
+    "react-export-json-csv": "^1.0.1-3.1",
+    "react-json-to-csv": "^1.2.0",
     "react-responsive-carousel": "^3.2.23",
     "react-uuid": "^2.0.0",
-    "typescript": "^5.0.4"
+    "sharp": "^0.32.5",
+    "typescript": "^5.0.4",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@types/aos": "^3.0.4",
+    "@types/json2csv": "^5.0.5",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"

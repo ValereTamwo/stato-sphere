@@ -13,15 +13,15 @@ export default function Banner() {
             <div className="text-slate-500 inline-flex">
               <a
                 className="font-medium hover:underline text-slate-50"
-                href="https://github.com/cruip/open-react-template"
+                href="#"
                 target="_blank"
                 rel="noreferrer"
               >
-                Bienvenue Chez <span className="hidden sm:inline"> Statosphere</span>
+                Bienvenue Chez <span className="">Statosphere</span>
               </a>{' '}
               <span className="italic px-1.5">-</span>{' '}
-              <a className="font-medium hover:underline text-white" href="https://cruip.com/open-pro/" target="_blank" rel="noreferrer">
-                Notre vision : accompagner vos reves
+              <a className="font-medium hover:underline text-white" href="#" target="_blank" rel="noreferrer">
+                Notre vision : accompagner vos rêves
               </a>
             </div>
             <button className="text-white hover:text-slate-400 pl-2 ml-3 border-l border-white" onClick={() => setBannerOpen(false)}>

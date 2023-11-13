@@ -30,7 +30,7 @@ export default function Header() {
                   href="/"
                   className="btn  border border-red-500 font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  Acceuil
+                  Accueil
                 </Link>
               </li>
               <li>
@@ -63,7 +63,7 @@ export default function Header() {
                   href="/biblio"
                   className="font-medium text-red-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  Bibliotheques
+                  bibliothèque
                 </Link>
               </li>
               <li>
@@ -81,6 +81,16 @@ export default function Header() {
                 >
                   <Image src={icom} width={40} height={40} alt='logo' />
                 </Link>
+              </li>
+              <li>
+                <Link href={'/tresor'}
+                  className="font-medium bg-orange-200 rounded-md text-red-500 hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+          Zone au Tresor
+          <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+        </svg>
+           </Link>
               </li>
             </ul>
           </nav>

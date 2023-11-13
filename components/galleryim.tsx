@@ -33,7 +33,7 @@ const GalleryImage: React.FC<GalleryImageProps> = ({ images }) => {
           <p className="text-xl text-gray-400">Rendez-Vous dans l'un de nos centres pour Obtenir le votre</p>
           </div>
           <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <a href='https://drive.google.com/file/d/1tbPUpdissDPjXvTMDuwRR5rnU2lTwmeC/view?usp=sharing' className='btn text-white bg-red-400'>
+              <a href='https://drive.google.com/file/d/1fogrzSTUIT-qQtulViChsYoDPbMhheh5/view?usp=sharing' className='btn text-white bg-red-400'>
                Voir un appercu !
              </a>
             </div>

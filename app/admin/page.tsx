@@ -16,7 +16,8 @@ import { getFirestore,deleteDoc } from 'firebase/firestore';
 import firebase_app from '@/components/firebaseConfig';
 import deleteData from '@/components/firestore/deleteData';
 import updateData from '@/components/firestore/updateData';
-
+import Link from 'next/link';
+import DocViewer from '@cyntler/react-doc-viewer';
 const db = getFirestore(firebase_app)
 
 
@@ -55,8 +56,13 @@ interface AnnoncesData {
   date: Timestamp;
    id:string;
 }
+interface Media {
+  bannerImage: string|File;
+  Title: string;
+  
+}
 
-type CollectionData = ResultsData | ExamsData | AnnoncesData;
+type CollectionData = ResultsData | ExamsData | AnnoncesData | Media;
 
 const AdminPanel: React.FC = () => {
 
@@ -106,6 +112,8 @@ const AdminPanel: React.FC = () => {
       setCollectionFields(['competitionName', 'bannerImage', 'subjects', 'courseList']);
     } else if (collection === 'annonces') {
       setCollectionFields([ 'bannerImage','Title', 'description', 'usefulLink']);
+    }else if (collection === 'media') {
+      setCollectionFields([ 'bannerImage','Title','description']);
     }
   }, [collection]);
 
@@ -182,12 +190,19 @@ const handleDelete = async (docId: string) => {
           <h3 className="h1 mb-4 text-red-500" data-aos="fade-up">Interface d'Administration</h3>
         <h3 className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Bienvenue <span className='text-3xl text-white font-bold'>Marc Aurel</span>. email : {user ? user.email : ''}</h3>
       </div>
-      <select className='text-red-500 mt-4 mb-5 ml-5' value={collection} onChange={handleCollectionChange}>
+      <select className='text-red-500 mt-4 mb-5 ml-5 rounded' value={collection} onChange={handleCollectionChange}>
         <option value="results">Résultats</option>
         {/* <option value="exams">Examens</option> */}
         <option value="annonces">Annonces</option>
+        <option value="media">media</option>
+
       </select>
-      
+      <Link href={'/forms'} className="ml-[20px] text-white bg-red-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-orange-600 dark:hover:bg-black dark:focus:ring-red-800">
+          Formulaire
+          <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+        </svg>
+      </Link>
       <table className="p-5 md:w-full w-[10%] text-sm text-left text-gray-500 dark:text-gray-400 ">
         <thead className="text-xs text-gray-700  bg-gray-50 dark:bg-gray-700 dark:text-gray-400 overflow-scroll">
           <tr className='overflow-scroll'>
@@ -228,9 +243,9 @@ const handleDelete = async (docId: string) => {
                   <input
                     className=''
                   type="file"
-                  accept="image/*"
+                  accept="*/*"
                    onChange={(e) => handleFormChange(field, e.target.files?.[0] || '')}
-                />
+                />  
               ) : (
                 <input
                   type="text"

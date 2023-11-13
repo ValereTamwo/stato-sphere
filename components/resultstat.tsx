@@ -1,10 +1,10 @@
 "use client"
 
 import Issea from '@/public/images/ecoles/issea.png'
-import Eamau from '@/public/images/ecoles/eamau.png'
-import Eamac from '@/public/images/ecoles/eamac.jpeg'
-import Ifford from '@/public/images/ecoles/ifford.png'
-import Ista from '@/public/images/ecoles/ista.png'
+import stat1 from '@/public/images/stat/stat 1.jpg'
+import stat2 from '@/public/images/stat/stat 2.jpg'
+import stat3 from '@/public/images/stat/stat 3.jpg'
+import stat4 from '@/public/images/stat/stat 4.jpg'
 import Essal from '@/public/images/ecoles/essal.png'
 import Cerdi from '@/public/images/ecoles/cerdi.png'
 import Ief from '@/public/images/ecoles/ief.png'
@@ -16,6 +16,27 @@ import { Timestamp } from 'firebase/firestore';
 import getCollectionData from '@/components/firestore/getData';
 import { useState,useEffect } from 'react'
 
+const Images =[{
+  id: 1,
+  src: stat1,
+  alt: 'string'
+},
+  {
+  id: 2,
+  src: stat2,
+  alt: 'string'
+  }
+  ,
+  {
+  id: 3,
+  src: stat3,
+  alt: 'string'
+  },
+  {
+  id: 4,
+  src: stat4,
+  alt: 'string'
+  }]
 
 interface ResultsData {
   competitionName: string;
@@ -110,11 +131,32 @@ export default function StatGrid() {
 
           {/*Section header*/}
           <div className="max-w-3xl border-t mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">Retrouvez ici nos statistiques des session de concours passees</h2>
+            <h2 className="h2 mb-4">Retrouvez ici nos statistiques des sessions de concours passees</h2>
             <p className="text-xl text-gray-400">Statos-Sphere : Numero 1 des concours de Bourse au Cameroun</p>
           </div> 
+            <div className="max-w-sm mx-auto grid gap-3  md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-center md:max-w-2xl lg:max-w-none" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
 
+              {Images.map((image) => (
+                  <div
+                    key={image.id}
+                    className="cursor-pointer border border-3  "
+                        // onClick={() => openImage(image)} 
+                        data-aos="fade-up" 
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover rounded-lg shadow-md transition duration-300 transform hover:scale-105"
+                    />
+                  </div>
+                ))}
+          </div>
+          {/* image here */}
           {/* Items */}
+          <div className="max-w-3xl mt-5 border-t mx-auto text-center pb-12 md:pb-20">
+            <h2 className="h2 mb-4"> Autres Statistiques</h2>
+            {/* <p className="text-xl text-gray-400">Statos-Sphere : Numero 1 des concours de Bourse au Cameroun</p> */}
+          </div> 
           <div className="max-w-sm mx-auto grid gap-3  md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-center md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
 
             

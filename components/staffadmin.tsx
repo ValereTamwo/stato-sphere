@@ -24,12 +24,12 @@ const StaffCard: React.FC<StaffMember> = ({ name, role, image }) => (
 
 const StaffPage: React.FC = () => {
   const staffMembers: StaffMember[] = [
-    { name: 'Marc Aurel', role: 'CEO - Ingenieur d\'application de la Statistique', image: FeatImage07 },
+     { name: '+237 655 431 373 / +33 754 451 622 ', role: 'Co-Fondateur', image: FeatImage07 },
     { name: 'Kengne Landry', role: 'Directeur General', image: FeatImage03 },
       { name: 'Dounla Russel ', role: 'Responsable Concours ISSEA cycle ISE Long / AS', image: FeatImage01 },
     { name: 'Omogo Williams', role: 'Responsable Concours ISSEA cycle ISE Long / AS', image: FeatImage06},
         { name: 'Kemayou Franck', role: 'Responsable Concours ISSEA cycle ISE Math', image: FeatImage02 },
-      { name: 'Mbessala Serges ', role: 'Responsable Concours ISSEA cycle ISE Economie', image: FeatImage04 },
+      { name: 'Bessala Serges ', role: 'Responsable Concours ISSEA cycle ISE Economie', image: FeatImage04 },
     { name: 'Ndobo Pierre', role: 'Responsable Concours ISSEA cycle ISE Economie', image: FeatImage05},
     // Ajoutez plus de membres du personnel...
   ];

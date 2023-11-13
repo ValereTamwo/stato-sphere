@@ -1,12 +1,11 @@
 import VideoThumb from '@/public/images/hero-image-01.jpg'
 import ModalVideo from '@/components/modal-video'
 import Ban from '@/public/images/banImg.jpg'
-import Link from 'next/link'
 
-export default function Hero() {
+export default function HeroForms() {
   return (
     <section>
-      <div className="w-full bg-orange-100 mx-auto px-4 sm:px-6  relative">
+      <div className="w-full bg-black mx-auto px-4 sm:px-6  relative">
 
         {/* Illustration behind hero content */}
         <div className="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none" aria-hidden="true" data-aos="fade-up" data-aos-delay="400">
@@ -26,26 +25,12 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4 text-red-500" data-aos="fade-up">Stato-Sphere : Preparation aux Concours de Bourses</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Centre d'orientation et de préparation des élèves et étudiants aux grands concours de bourses en Afrique francophone.</p>
+            <h1 className="h1 mb-4 text-red-500" data-aos="fade-up">Stato-Sphere : Forms</h1>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Centre D'orientation et de Preparation des Eleves et Etudiants Aux Grands Concours de Bourse en Afrique Francophone</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
-                <Link className="btn text-white bg-black hover:bg-gray-700  w-full mb-4 sm:w-auto sm:mb-0" href="/contact">Contact us</Link>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-red-500 hover:bg-gray-800  w-full sm:w-auto sm:ml-4" href="#more">Learn more</a>
-              </div>
+             
             </div>
           </div>
-
-          <ModalVideo
-            thumb={Ban}
-            thumbWidth={900}
-            thumbHeight={400}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/stato.mp4"
-            videoWidth={1920}
-            videoHeight={1080} />
 
         </div>
 

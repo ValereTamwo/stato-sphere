@@ -48,6 +48,7 @@ export const Images =[{
 ]
 
 import Image from 'next/image'
+import Link from 'next/link'
 export default function Features() {
   return (
     <section id='more'>
@@ -66,65 +67,74 @@ export default function Features() {
 
             {/* 1st item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
-                <Image src={Issea} width={200} height={200} alt='issea' />  
+              <Link href={'https://www.issea-cemac.org/issea/fr'} className='flex flex-col' >   <Image src={'/images/ecoles/issea.png'} width={200} height={200} alt='issea' /></Link> 
               <h4 className="h4 mb-2">ISSEA</h4>
               <p className="text-lg text-gray-400 text-center">Institut Sous Regional De la Statistiques et De L'economie Applique</p>
+               
             </div>
 
             {/* 2nd item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
-             <Image src={Eamau} width={80} height={80} alt='issea' /> 
-              <h4 className="h4 mb-2">EAMAU</h4>
+            <Link href={'https://www.eamau.org/'} className='flex flex-col'>   <Image src={'/images/ecoles/eamau.png'} width={80} height={80} alt='issea' /> 
+ </Link>             <h4 className="h4 mb-2">EAMAU</h4>
               <p className="text-lg text-gray-400 text-center">Ecole Africaine des Métiers de l'Architecture et de l'Urbanisme</p>
+             
             </div>
 
             {/* 3rd item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
-              <Image src={Eamac} width={80} height={80} alt='issea' /> 
-              <h4 className="h4 mb-2">EAMAC</h4>
+              <Link href={'http://www.eamac.ne/'} className='flex flex-col'>  <Image src={'/images/ecoles/eamac.jpeg'} width={80} height={80} alt='issea' /> 
+</Link>              <h4 className="h4 mb-2">EAMAC</h4>
               <p className="text-lg text-gray-400 text-center">Ecole Africaine de la Météorologie et de l'Aviation Civile</p>
+              
             </div>
 
             {/* 4th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="300" data-aos-anchor="[data-aos-id-blocks]">
-             <Image src={Ifford} width={200} height={100} alt='issea' /> 
-              <h4 className="h4 mb-2">IFORD</h4>
-              <p className="text-lg text-gray-400 text-center">institut de formation et de recherche demographique </p>
+            <Link href={'http://www.iford-cm.org/'} className='flex flex-col'>   <Image src={'/images/ecoles/ifford.png'} width={200} height={100} alt='issea' /> 
+  </Link>            <h4 className="h4 mb-2">IFORD</h4>
+                <p className="text-lg text-gray-400 text-center">institut de formation et de recherche demographique </p>
+                 
             </div>
 
             {/* 5th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="[data-aos-id-blocks]">
-              <Image src={Ista} width={100} height={100} alt='issea' /> 
-              <h4 className="h4 mb-2">ISTA</h4>
-              <p className="text-lg text-gray-400 text-center">'Institut sous-régional multisectoriel de technologie appliquée</p>
+            <Link href={'https://www.ista-cemac.org/'} className='flex flex-col'>   <Image src={'/images/ecoles/ista.png'} width={100} height={100} alt='issea' />
+</Link>              <h4 className="h4 mb-2">ISTA</h4>
+                <p className="text-lg text-gray-400 text-center">'Institut sous-régional multisectoriel de technologie appliquée</p>
+            
             </div>
 
             {/* 6th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="[data-aos-id-blocks]">
-              <Image src={Essal} width={100} height={100} alt='issea' /> 
-              <h4 className="h4 mb-2">ESSAL</h4>
-              <p className="text-lg text-gray-400 text-center">L'école du service de santé des armées de Lomé</p>
+            <Link href={'https://www.essal.tg/'} className='flex flex-col'>    <Image src={'/images/ecoles/essal.png'} width={100} height={100} alt='issea' /> 
+  </Link>            <h4 className="h4 mb-2">ESSAL</h4>
+                <p className="text-lg text-gray-400 text-center">L'école du service de santé des armées de Lomé</p>
+                 
             </div>
              {/* 5th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="[data-aos-id-blocks]">
-              <Image src={Cerdi} width={90} height={90} alt='issea' /> 
-              <h4 className="h4 mb-2">CERDI</h4>
-              <p className="text-lg text-gray-400 text-center">'Institut sous-régional multisectoriel de technologie appliquée</p>
+              <Link href={'https://cerdi.uca.fr/'} className='flex flex-col'>  <Image src={'/images/ecoles/cerdi.png'} width={90} height={90} alt='issea' /> 
+    </Link>          <h4 className="h4 mb-2">CERDI</h4>
+                <p className="text-lg text-gray-400 text-center">'Institut sous-régional multisectoriel de technologie appliquée</p>
+                 
             </div>
  
             {/* 6th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="[data-aos-id-blocks]">
-              <Image src={Ief} width={90} height={90} alt='issea' /> 
-              <h4 className="h4 mb-2">IEF</h4>
-              <p className="text-lg text-gray-400 text-center">Institut Européen de Formation</p>
+              <Link href={'https://www.institutformation.org/'} className='flex flex-col'>  <Image src={'/images/ecoles/ief.png'} width={90} height={90} alt='issea' /> 
+      </Link>        <h4 className="h4 mb-2">IEF</h4>
+                <p className="text-lg text-gray-400 text-center">Institut Européen de Formation</p>
+                 
             </div>
 
              <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="[data-aos-id-blocks]">
-              <Image src={Iia} width={90} height={90} alt='issea' /> 
-              <h4 className="h4 mb-2">IIA</h4>
-              <p className="text-lg text-gray-400 text-center">L'école du service de santé des armées de Lomé</p>
+            <Link href={'http://www.iiayaounde.com/'} className='flex flex-col'>    <Image src={'/images/ecoles/iia.png' } width={90} height={90} alt='issea' /> 
+     </Link>         <h4 className="h4 mb-2">IIA</h4>
+                <p className="text-lg text-gray-400 text-center">Institut International des Assurances</p>
+                 
             </div>
-
+     
           </div>
 
         </div>

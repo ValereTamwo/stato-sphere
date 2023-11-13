@@ -1,0 +1,24 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites":[
+      {
+        "source": "/editform/:title/:desc",
+        "destination": "/editform/[title]/[desc]/index.html"
+      },
+      {
+        "source": "/resultat/**",
+        "destination": "/resultat/[id]/index.html"
+      },
+      {
+        "source": "/public.form/**",
+        "destination": "/public.form/[id]/index.html"
+      }
+    ]
+  }
+}

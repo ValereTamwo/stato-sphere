@@ -87,11 +87,11 @@ export default function Latest() {
           </div>
 
           {/* Items */}
-          <div className="max-w-sm mx-auto grid gap-3  md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-center md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
+          <div className="max-w-sm mx-auto grid gap-3  md:grid-cols-2 lg:grid-cols-3 lg:gap-16  md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
 
          {documents.map((collection) => {
               return (
-              <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
+              <div className="max-w-fit  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
               <a href="#">
                   <Image src={collection.bannerImage} width={500} height={500} alt='issea' />  
               </a>

@@ -1,3 +1,5 @@
+'use client'
+import Link from "next/link"
 export default function Newsletter() {
   return (
     <section>
@@ -31,7 +33,7 @@ export default function Newsletter() {
             <form className="w-full lg:w-1/2">
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
                 {/* <input type="email" className="w-full appearance-none bg-white border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-black" placeholder="Your best email…" aria-label="Your best email…" /> */}
-                <a className="btn text-white bg-black hover:bg-red-500 shadow" href="/contact">Contact us</a>
+                <Link className="btn text-white bg-black hover:bg-red-500 shadow" href="/contact">Contact us</Link>
               </div>
               {/* Success message */}
               {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
