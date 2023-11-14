@@ -8,16 +8,16 @@
     ],
     "rewrites":[
       {
-        "source": "/editform/:title/:desc",
-        "destination": "/editform/[title]/[desc]/index.html"
+        "source": "/editform/:title/**",
+        "destination": "/editform/[title]/[desc]/"
       },
       {
         "source": "/resultat/**",
-        "destination": "/resultat/[id]/index.html"
+        "destination": "/resultat/[id]/"
       },
       {
         "source": "/public.form/**",
-        "destination": "/public.form/[id]/index.html"
+        "destination": "/public.form/[id]/"
       }
     ]
   }
